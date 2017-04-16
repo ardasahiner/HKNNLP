@@ -1,0 +1,26 @@
+PDF Parser
+1. PDF Parser selection
+	a. PyPDF2 (Problem is the white spaces are all gone.)
+	b. PDFMiner
+2. Separate PDF files into problems
+	a. By keywords or special problem pattern
+3. Data samples
+	a. CS70 exams (Need to parse mathematic symbols)
+
+NLP analysis.
+1. Data Process (Vectorization)
+	a. Bag of Words
+	b. TF-IDF word frequency
+2. ML methods
+	a. Unsupervised Learning
+		i. Latent Dirichlet Allocation (LDA)
+		ii. Latent semantic analysis (LSA)
+			(PCA + K-mean clustering)
+	b. Supervised Learning
+		(Problem: Not enough Data to train.)
+	c. Heuristic
+		i. Search by keywords (Probably not gonna work well)
+		ii. Utilize tagged exam
+			cluster exams by topics
+			remove overdetermined topics
+			Find cosine similarity of new data and cluster points
