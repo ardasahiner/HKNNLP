@@ -32,7 +32,7 @@ def parse_problems():
     filenames = [filename for filename in os.listdir(path) if filename != '.DS_Store']
     filename = filenames[0]
     text = convert_pdf_to_txt(path+filename)
-    lines = [line for line in text.split('\n') if len(line) > 0]
+    lines = [line.strip('\x0c') for line in text.split('\n') if len(line) > 0]
 
     keywords = ['Problem', 'Section']
     for i in range(26):
@@ -43,7 +43,7 @@ def parse_problems():
     for line in lines:
         new_prob = False
         for keyword in keywords:
-            if keyword in line:
+            if keyword in line and line.find(keyword) == 0:
                 new_prob = True
         if new_prob:
             problems.append(problem)
