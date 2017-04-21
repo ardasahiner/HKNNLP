@@ -1,8 +1,8 @@
 PDF Parser
-1. PDF Parser selection
+1. PDF Parser selection (Done)
 	a. PyPDF2 (Problem is the white spaces are all gone.)
-	b. PDFMiner
-2. Separate PDF files into problems
+	b. PDFMiner (Works, pdf with image scan are ignored and deleted)
+2. Separate PDF files into problems 
 	a. By keywords or special problem pattern
 3. Data samples
 	a. CS70 exams (Need to parse mathematic symbols)
