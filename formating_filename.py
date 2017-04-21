@@ -7,6 +7,6 @@ for filename in os.listdir(path):
     rename_str = filename
     if filename.startswith("cs70_"):
         rename_str = rename_str[5:]
-    if filename.endswith("mt1.pdf"):
+    if filename.endswith("_mt1.pdf"):
         rename_str = rename_str[:-7] + ".pdf"
     os.rename(path + filename, path + rename_str)
